@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create blog post</title>
-    <script type="module" src="../post/create.html"></script>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="../style/styles.css" />
+    <script type="module" src="../js/createpost.mjs"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <header>
+    <img class="logo" src="../assits/6502423.jpg" alt="Logo">
+    <p>HotView Labs</p>
+    <a href="../index.html">Home</a>
+</header>
+  <body>
+    <h1 class="title">Create a new post</h1>
+    <form class="post_inputs" method="post" action="/">
+      <label for="create_titlepost">Title</label>
+      <input type="text" id="create_titlepost" placeholder="Your title" />
+      <label for="create_post">Content</label>
+      <textarea id="create_post" placeholder="Write your content here"></textarea>
+      <label for="create_image">Image link</label>
+      <input
+        type="text"
+        id="create_image"
+        placeholder="URL address for your image"
+      />
+      <input type="text" placeholder="Add a description for your image" />
+      <button id="save_create" type="button">Save</button>
+    </form>
+  </body>
 </html>
