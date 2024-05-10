@@ -7,13 +7,25 @@
     <link rel="stylesheet" href="./style/styles.css" />
     <script type="module" src="./js/carusel.mjs"></script>
     <script type="module" src="./js/registerlogin.mjs"></script>
+    <script type="module" src="./js/indexhome.mjs"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <img class="logo" src="./assits/6502423.jpg" alt="Logo">
+      <img class="logo" src="./assits/6502423.jpg" alt="Logo" />
       <p>HotView Labs</p>
-      <a href="./account/register.html"><button>Register</button></a>
-      <a href="./account/login.html"><button>LogIn</button></a>
+      <div id="signindiv" class="hidden">
+        <a href="./account/register.html"><button>Register</button></a>
+        <a href="./account/login.html"><button>LogIn</button></a>
+      </div>
+      <div id="creatediv" class="hidden">
+        <a href="./post/create.html"><button>Create a new post</button></a>
+      </div>
     </header>
     <main>
       <!--Section 1-->
@@ -32,7 +44,9 @@
           1500s, when an unknown printer took a galley of type and scrambled it
           to make a type specimen book.
         </p>
-        <a href="#"><button class="read-more-button read-more-text">read more</button></a>
+        <a href="#"
+          ><button class="read-more-button read-more-text">read more</button></a
+        >
       </div>
       <!--Section 1 end-->
       <!--Section 2-->
