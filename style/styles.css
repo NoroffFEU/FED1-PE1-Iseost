@@ -54,6 +54,13 @@ header {
   width: 360px;
 }
 
+#blog_post_conatiner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3em;
+  margin-top: 18em;
+}
+
 /* Buttons */
 
 .read-more-button {
@@ -67,23 +74,52 @@ header {
 
 
 
-/* Buttons */
+/* Carousel*/
 
-  .carousel-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-  }
-  .carousel {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  .post {
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-  }
+.lates_post_container {
+  width: 360px;
+  height: 330px; /* Adjusted height to include image and text */
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.backround_image {
+  width: 100%;
+  height: 165px;
+  background-size: cover;
+  background-position: center;
+  transform: scaleX(-1); /* Mirroring the image */
+}
+.latest_post_content {
+  padding: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+h2, .lates_post_text {
+  margin: 0;
+  padding: 5px;
+}
+.lates_post_text {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.carousel-item {
+  flex: 0 0 auto;
+  width: 300px;
+  margin-right: 10px;
+}
 
 /* || Footer */
 

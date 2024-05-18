@@ -25,57 +25,8 @@ async function get_blogpost(id) {
         titlebox.innerHTML = title;
         blogbox.innerHTML = body;
         imagebox.src = media.url;
-        imagebox.setAttribute('alt', media.alt);
-        
+        imagebox.setAttribute('alt', media.alt); 
     }
 }
-
-
-
-
-
-
-//game image
-const card = document.createElement('div');
-card.classList.add("card");
-
-const gameImage = document.createElement("img");
-gameImage.src = coverImage;
-gameImage.classList.add("cover");
-
-gameImage.addEventListener("click", function () {
-    window.location.href = 'post/index.html';
-});
-
-card.appendChild(gameImage);
-
-//Game title
-const title = document.createElement("p");
-// title.classList.add("small_title");
-title.innerText = gameTitle;
-
-card.appendChild(title);
-
-content.appendChild(card);
-
-
-async function createGames() {
-    const games = await getGames();
-
-
-    games.forEach((game) => {
-        createBlogBox(game.image.url, game.title, game.genre);
-    });
-
-}
-
-createGames();
-
-
-
-
-
-
-
 
 

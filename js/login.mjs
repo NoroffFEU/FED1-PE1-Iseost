@@ -19,6 +19,7 @@ async function login(email, password) {
     const data = await fetch("https://v2.api.noroff.dev/auth/login", {
         method: 'post',
         headers: {
+            'accept': 'application/json',
             'Content-Type': 'application/json'
         },
         body: JSON.stringify ({
@@ -26,7 +27,7 @@ async function login(email, password) {
             password:password
         })
     });
-    //Sender over til welcome side vis alt stemmer med api
+    //Sender over til homepage vis alt stemmer med api
     if(data.status === 200){
         const tech = await data.json();
         const token = tech.data.accessToken;

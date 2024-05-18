@@ -1,44 +1,44 @@
+const postIDs = [];
 
-  // Fetch the latest blog posts from your API or source
-  // For demonstration purpose, I'll simulate fetching data
-  const latestPosts = [
-    { title: "Post 1", content: "Content of Post 1" },
-    { title: "Post 2", content: "Content of Post 2" },
-    { title: "Post 3", content: "Content of Post 3" }
-  ];
-
-  // Function to render blog posts
-  function renderPosts(posts) {
-    const carousel = document.querySelector('.carousel');
-    carousel.innerHTML = '';
-
-    posts.forEach(post => {
-      const postElement = document.createElement('div');
-      postElement.classList.add('post');
-      postElement.innerHTML = `
-        <h2>${post.title}</h2>
-        <p>${post.content}</p>
-      `;
-      carousel.appendChild(postElement);
-    });
+async function fetchPostByID(id) {
+  try {
+    const response = await fetch(`https://v2.api.noroff.dev/blog/posts/iseeng/${id}`);
+    return await response.json();
+  } catch (error) {
+    console.error('Error fetching post:', error);
+    return null;
   }
+}
 
-  // Initially render latest posts
-  renderPosts(latestPosts);
-
-  // Function to handle carousel navigation
-  function navigateCarousel(direction) {
-    const carousel = document.querySelector('.carousel');
-    const currentScroll = carousel.scrollLeft;
-    const postWidth = carousel.firstElementChild.offsetWidth;
-    const scrollDistance = direction === 'next' ? postWidth : -postWidth;
-    carousel.scrollTo({
-      left: currentScroll + scrollDistance,
-      behavior: 'smooth'
-    });
+async function fetchLatestPosts(ids) {
+  try {
+    const posts = await Promise.all(ids.map(id => fetchPostByID(id)));
+    renderPosts(posts.filter(post => post !== null)); // Filter out any null responses
+  } catch (error) {
+    console.error('Error fetching latest posts:', error);
   }
+}
 
-  // Add event listeners to navigation buttons
-  document.getElementById('prev').addEventListener('click', () => navigateCarousel('prev'));
-  document.getElementById('next').addEventListener('click', () => navigateCarousel('next'));
+function renderPosts(posts) {
+  const carousel = document.getElementById('carousel');
+  carousel.innerHTML = '';
 
+  posts.forEach(post => {
+    const postElement = document.createElement('div');
+    postElement.classList.add('carousel-item');
+    postElement.innerHTML = `
+      <div class="lates_post_container">
+        <div class="backround_image" style="background-image: url('${post.image}')"></div>
+        <div class="latest_post_content">
+          <h2>${post.title}</h2>
+          <p class="lates_post_text">${post.excerpt}</p>
+          <a href="${post.url}"><button class="read-more-button read-more-text">read more</button></a>
+        </div>
+      </div>
+    `;
+    carousel.appendChild(postElement);
+  });
+}
+
+// Fetch and render the latest posts by IDs
+fetchLatestPosts(postIDs);

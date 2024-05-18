@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HotView Labs - Home</title>
     <link rel="stylesheet" href="./style/styles.css" />
-    <script type="module" src="./js/carusel.mjs"></script>
-    <script type="module" src="./js/registerlogin.mjs"></script>
+    <script type="module" src="./js/login.mjs"></script>
+    <script type="module" src="./js/logout.mjs"></script>
+    <script type="module" src="./js/register.mjs"></script>
+    <!-- <script type="module" src="./js/carusel.mjs"></script> -->
     <script type="module" src="./js/indexhome.mjs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,6 +27,7 @@
       </div>
       <div id="creatediv" class="hidden">
         <a href="./post/create.html"><button>Create a new post</button></a>
+        <a id="logout" href="#"><button>Log out</button></a>
       </div>
     </header>
     <main>
@@ -50,10 +53,14 @@
       </div>
       <!--Section 1 end-->
       <!--Section 2-->
-      <div class="carusel-container">
-        <div class="carusel"></div>
-      </div>
+      <div class="carousel-container">
+        <div class="carousel" id="carousel">
       <!--Section 2 end-->
+      <!--Section 3-->
+      <h2 class="title"></h2>
+      <div id="blog_post_conatiner">
+      </div>
+      <!--Section 3 end-->
     </main>
     <footer></footer>
   </body>
