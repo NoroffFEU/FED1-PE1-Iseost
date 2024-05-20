@@ -14,8 +14,9 @@ async function getPostes() {
     return games.data;
 }
 
-function createBlogBox(coverImage, blogTitle) {
+function createBlogBox(coverImage, blogTitle, blogId ) {
     const content = document.getElementById("blog_post_conatiner");
+
 
 
     //blog image
@@ -27,7 +28,7 @@ function createBlogBox(coverImage, blogTitle) {
     blogImage.classList.add("cover");
 
     blogImage.addEventListener("click", function () {
-        window.location.href = 'post/index.html';
+        window.location.href = `/post/index.html?id=${blogId}`;
     });
 
     card.appendChild(blogImage);
@@ -41,6 +42,10 @@ function createBlogBox(coverImage, blogTitle) {
 
     content.appendChild(card);
 
+    //a tag
+
+
+
 }
 
 async function createPostes() {
@@ -48,7 +53,7 @@ async function createPostes() {
 
 
     blogs.forEach((blog) => {
-        createBlogBox(blog.media.url, blog.media.alt, blog.title);
+        createBlogBox(blog.media.url, blog.title, blog.id);
     });
 
 }

@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const postId = new URLSearchParams(window.location.search).get('id');
     loadPostData(postId);
 
+
     document.getElementById('save_edit').addEventListener('click', function() {
         const title = document.getElementById('edit_titlepost').value;
         const content = document.getElementById('edit_post').value;
@@ -18,21 +19,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 async function loadPostData(postId) {
     try {
-        const response = await fetch(`https://v2.api.noroff.dev/blog/posts/${postId}`, {
+        const response = await fetch(`https://v2.api.noroff.dev/blog/posts/iseeng/${postId}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
-                'X-Noroff-API-Key': apiKey.data.apiKey
+                'Authorization': 'Bearer ' + localStorage.getItem('accessToken')
             }
         });
 
-        if (response.ok) {
+        if (response.status === 200) {
             const post = await response.json();
-            document.getElementById('edit_titlepost').value = post.title;
-            document.getElementById('edit_post').value = post.body;
-            document.getElementById('edit_image').value = post.media.url;
-            document.getElementById('edit_image_description').value = post.media.alt;
+            console.log(post)
+            document.getElementById('edit_titlepost').value = post.data.title;
+            document.getElementById('edit_post').value = post.data.body;
+            document.getElementById('edit_image').value = post.data.media.url;
+            document.getElementById('edit_image_description').value = post.data.media.alt;
         } else {
             alert('Failed to load post data.');
         }
@@ -43,12 +44,11 @@ async function loadPostData(postId) {
 
 async function editBlogPost(postId, title, body, url, alt) {
     try {
-        const response = await fetch(`https://v2.api.noroff.dev/blog/posts/${postId}`, {
+        const response = await fetch(`https://v2.api.noroff.dev/blog/posts/iseeng/${postId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
-                'X-Noroff-API-Key': apiKey.data.apiKey
+                'Authorization': 'Bearer ' + localStorage.getItem('accessToken')
             },
             body: JSON.stringify({
                 title: title,
@@ -60,7 +60,7 @@ async function editBlogPost(postId, title, body, url, alt) {
             })
         });
 
-        if (response.ok) {
+        if (response.status === 200) {
             alert('Post updated successfully.');
             window.location.replace(`/post/index.html?id=${postId}`);
         } else {
@@ -71,18 +71,18 @@ async function editBlogPost(postId, title, body, url, alt) {
     }
 }
 
+
 async function deleteBlogPost(postId) {
     try {
-        const response = await fetch(`https://v2.api.noroff.dev/blog/posts/${postId}`, {
+        const response = await fetch(`https://v2.api.noroff.dev/blog/posts/iseeng/${postId}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
-                'X-Noroff-API-Key': apiKey.data.apiKey
+                'Authorization': 'Bearer ' + localStorage.getItem('accessToken')
             }
         });
 
-        if (response.ok) {
+        if (response.status === 204) {
             alert('Post deleted successfully.');
             window.location.replace('/index.html');
         } else {

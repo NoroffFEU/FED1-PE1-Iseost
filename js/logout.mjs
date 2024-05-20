@@ -6,7 +6,7 @@ function logout() {
     localStorage.removeItem('accessToken');
     localStorage.removeItem('username');
 
-    window.location.replace('/account/login.html');
+    window.location.replace('index.html');
 }
 document.addEventListener('DOMContentLoaded', function () {
     const token = localStorage.getItem('accessToken');

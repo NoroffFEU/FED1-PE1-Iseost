@@ -4,6 +4,12 @@
 // Se hva du gjorde på gamehub siå - replace!
 // Style!
 
+if (localStorage.getItem('accessToken')) {
+    document.getElementById('edit_button').classList.remove('hidden');
+}
+else {
+    document.getElementById('edit_button').classList.add('hidden');
+}
 
 const parameter = window.location.search;
 const searchParameter = new URLSearchParams(parameter);
@@ -22,10 +28,12 @@ async function get_blogpost(id) {
         const titlebox = document.getElementById('title')
         const blogbox = document.getElementById('content')
         const imagebox = document.getElementById('image')
+        const editbutton = document.getElementById('edit_button')
         titlebox.innerHTML = title;
         blogbox.innerHTML = body;
         imagebox.src = media.url;
-        imagebox.setAttribute('alt', media.alt); 
+        imagebox.setAttribute('alt', media.alt);
+        editbutton.href = `/post/edit.html?id=${id}` 
     }
 }
 

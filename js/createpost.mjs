@@ -14,8 +14,7 @@ async function create_blogpost(title, body, url, alt) {
         method: 'post',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
-            'X-Noroff-API-Key': apiKey.data.apiKey
+            'Authorization': 'Bearer ' + localStorage.getItem('accessToken')
         },
         body: JSON.stringify ({
             title:title,
