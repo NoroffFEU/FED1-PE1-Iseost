@@ -72,22 +72,6 @@ button {
 
 /* || Body */
 
-.lates_post_container {
-  width: 300px;
-  height: 165px;
-  display: flex;
-  flex-direction: column;
-}
-
-.lates_post_text {
-  width: 185px;
-  height: 75px;
-}
-
-.backround_image {
-  width: 360px;
-}
-
 #blog_post_conatiner {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -105,6 +89,8 @@ button {
   text-transform: uppercase;
   border-style: none;
 }
+
+
 
 /* Carousel*/
 
@@ -202,7 +188,7 @@ h2,
 }
 
 
-#login, #register, input {
+.buttons_login_register, input {
   width: 600px;
   height: 50px;
   
