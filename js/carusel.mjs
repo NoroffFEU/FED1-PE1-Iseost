@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevButton = document.querySelector('.prev-button');
   const nextButton = document.querySelector('.next-button');
   let currentIndex = 0;
-  let posts = [];
+  let posts = [id];
 
   // Fetch latest posts
   async function fetchLatestPosts() {
     try {
-      const response = await fetch('https://v2.api.noroff.dev/blog/posts?limit=3', {
+      const response = await fetch(`https://v2.api.noroff.dev/blog/posts/iseeng/${id}`, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
