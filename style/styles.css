@@ -3,15 +3,15 @@
 /* General */
 
 h1 {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 h2 {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 p {
-  font-size: 12px;
+  font-size: 18px;
 }
 
 h1,
@@ -181,6 +181,55 @@ h2,
 #create_post {
   height: 500px;
 }
+
+
+/* || Log in and register */
+
+.img_text_log_reg, .form_log_reg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5em;
+  ;
+}
+
+.img_log_reg {
+  height: 200px;
+  width: 200px;
+}
+
+
+.text_login_register, .link_login_register, #login, #register  {
+  text-transform: uppercase;
+
+}
+
+.link_login_register {
+  text-decoration: underline;
+  margin-top: 1em;
+}
+
+
+#login, #register, input {
+  width: 600px;
+  height: 50px;
+  
+}
+
+label {
+  margin-bottom: 1em;
+}
+
+input {
+  margin-bottom: 5em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 
 /* || Media Queries */
 

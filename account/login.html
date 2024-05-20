@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log In</title>
-    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="stylesheet" href="../style/styles.css" />
     <script type="module" src="../js/login.mjs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,32 +15,52 @@
   </head>
   <header>
     <div id="header_logo">
-        <a href="../index.html"><img class="logo" src="../assits/6502423.jpg" alt="Logo" /></a>
-        <p id="text_header">HotView Labs</p>
+      <a href="../index.html"
+        ><img class="logo" src="../assits/6502423.jpg" alt="Logo"
+      /></a>
+      <p id="text_header">HotView Labs</p>
     </div>
     <div id="button_container">
-        <div id="signindiv" class="hidden">
-            <a href="./account/register.html"><button>Register</button></a>
-            <a href="./account/login.html"><button>LogIn</button></a>
-        </div>
-        <div id="creatediv" class="hidden">
-            <a href="./post/create.html"><button class="header_button">Create a new post</button></a>
-            <a id="logout" href="#"><button class="header_button">Log out</button></a>
-        </div>
+      <div id="signindiv" class="hidden">
+        <a href="./account/register.html"><button>Register</button></a>
+        <a href="./account/login.html"><button>LogIn</button></a>
+      </div>
+      <div id="creatediv" class="hidden">
+        <a href="./post/create.html"
+          ><button class="header_button">Create a new post</button></a
+        >
+        <a id="logout" href="#"
+          ><button class="header_button">Log out</button></a
+        >
+      </div>
     </div>
-</header>
+  </header>
   <body>
-    <form method="post" action="/">
-      <label for="login_email">email address</label>
-      <input type="email" id="login_email" placeholder="name@example.com" />
-      <label for="login_password">password</label>
-      <input type="password" id="login_password" placeholder="password" />
-      <button id="login" type="button">log in</button>
-    </form>
-    <p>
-      Lorem Lorem ipsum dolor.
-    </p>
-    <a href="../account/register.html">register here</a>
+    <div class="img_text_log_reg">
+      <img class="img_log_reg" src="../assits/6502423.jpg" alt="Logo" />
+      <p>Log Into HotView Labs</p>
+    </div>
+    <div class="form_log_reg">
+      <form method="post" action="/">
+        <label class="text_login_register" for="login_email"
+          >email address</label
+        >
+        <input
+          type="email"
+          text_login_register
+          id="login_email"
+          placeholder="name@example.com"
+        />
+        <label for="login_password">password</label>
+        <input type="password" id="login_password" placeholder="password" />
+        <button id="login" type="button">log in</button>
+      </form>
+      <p class="text_login_register">
+        Can't log in? Maybe your not registered!
+      </p>
+      <a class="link_login_register" href="../account/register.html"
+        >register here</a
+      >
+    </div>
   </body>
 </html>
-
