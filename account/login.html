@@ -14,9 +14,20 @@
     />
   </head>
   <header>
-    <img class="logo" src="../assits/6502423.jpg" alt="Logo">
-    <p>HotView Labs</p>
-    <a href="../index.html">Home</a>
+    <div id="header_logo">
+        <a href="../index.html"><img class="logo" src="../assits/6502423.jpg" alt="Logo" /></a>
+        <p id="text_header">HotView Labs</p>
+    </div>
+    <div id="button_container">
+        <div id="signindiv" class="hidden">
+            <a href="./account/register.html"><button>Register</button></a>
+            <a href="./account/login.html"><button>LogIn</button></a>
+        </div>
+        <div id="creatediv" class="hidden">
+            <a href="./post/create.html"><button class="header_button">Create a new post</button></a>
+            <a id="logout" href="#"><button class="header_button">Log out</button></a>
+        </div>
+    </div>
 </header>
   <body>
     <form method="post" action="/">
