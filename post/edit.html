@@ -20,23 +20,33 @@
     </div>
     <div id="button_container">
         <div id="signindiv" class="hidden">
-            <a href="./account/register.html"><button>Register</button></a>
-            <a href="./account/login.html"><button>LogIn</button></a>
+            <a href="../account/register.html"><button>Register</button></a>
+            <a href="../account/login.html"><button>LogIn</button></a>
         </div>
         <div id="creatediv" class="hidden">
-            <a href="./post/create.html"><button class="header_button">Create a new post</button></a>
+            <a href="../post/create.html"><button class="header_button">Create a new post</button></a>
             <a id="logout" href="#"><button class="header_button">Log out</button></a>
         </div>
     </div>
 </header>
   <body>
-    <h1>Edit your post</h1>
-    <form method="post" action="/">
+    <body>
+      <h1 class="title">Edit Post</h1>
+      <form class="post_inputs" method="post" action="/">
         <label for="edit_titlepost">Title</label>
-        <input type="text" id="edit_titlepost"/>
+        <input type="text" id="edit_titlepost" placeholder="Your title" />
         <label for="edit_post">Content</label>
-        <input type="text" id="edit_post" placeholder="Write your content here"/>
+        <textarea id="edit_post" placeholder="Write your content here"></textarea>
+        <label for="edit_image">Image link</label>
+        <input
+          type="text"
+          id="edit_image"
+          placeholder="URL address for your image"
+        />
+        <input type="text" id="edit_image_description" placeholder="Add a description for your image" />
         <button id="save_edit" type="button">Save</button>
+        <button id="delete_post" type="button">Delete</button>
       </form>
+    </body>
   </body>
 </html>

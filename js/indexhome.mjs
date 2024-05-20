@@ -14,7 +14,7 @@ async function getPostes() {
     return games.data;
 }
 
-function createBlogBox(coverImage, gameTitle) {
+function createBlogBox(coverImage, blogTitle) {
     const content = document.getElementById("blog_post_conatiner");
 
 
@@ -35,7 +35,7 @@ function createBlogBox(coverImage, gameTitle) {
     //Blog title
     const title = document.createElement("p");
     // title.classList.add("small_title");
-    title.innerText = gameTitle;
+    title.innerText = blogTitle;
 
     card.appendChild(title);
 
