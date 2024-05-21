@@ -8,18 +8,20 @@ else {
 
 
 async function getPostes() {
-    const data = await fetch('https://v2.api.noroff.dev/blog/posts/iseeng'); //social/profiles/<name>/posts
-    const games = await data.json();
-    console.log(games);
-    return games.data;
+    const data = await fetch('https://v2.api.noroff.dev/blog/posts/iseeng');
+    const blog = await data.json();
+    console.log(blog);
+    return blog.data;
 }
 
-function createBlogBox(coverImage, blogTitle, blogId ) {
+
+//Blog boxes
+function createBlogBox(coverImage, blogTitle, blogId) {
     const content = document.getElementById("blog_post_conatiner");
 
 
 
-    //blog image
+    //Blog image
     const card = document.createElement('div');
     card.classList.add("card");
 
@@ -34,17 +36,14 @@ function createBlogBox(coverImage, blogTitle, blogId ) {
     card.appendChild(blogImage);
 
     //Blog title
-    const title = document.createElement("p");
-    // title.classList.add("small_title");
+    const title = document.createElement("h2");
+    title.classList.add('cover_text');
     title.innerText = blogTitle;
+
 
     card.appendChild(title);
 
     content.appendChild(card);
-
-    //a tag
-
-
 
 }
 
@@ -59,7 +58,3 @@ async function createPostes() {
 }
 
 createPostes();
-
-
-
-

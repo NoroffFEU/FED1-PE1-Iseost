@@ -1,71 +1,62 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const carouselContainer = document.querySelector('.carousel');
-  const prevButton = document.querySelector('.prev-button');
-  const nextButton = document.querySelector('.next-button');
   let currentIndex = 0;
   let posts = [];
 
-  // Fetch latest posts
-  async function fetchLatestPosts() {
-    try {
-      const response = await fetch(`https://v2.api.noroff.dev/blog/posts/iseeng/?limit=3`, {
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
-        }
-      });
-      if (response.status === 200) {
-        const data = await response.json();
-        console.log('API response:', data); // Log the API response
-        posts = data.data; // Extract the array of posts from the data property
-        if (Array.isArray(posts)) {
-          renderCarouselItems();
-        } else {
-          console.error('Unexpected response format:', data);
-        }
-      } else {
-        console.error('Failed to fetch posts:', response.status, response.statusText);
+  async function getPosts(limit = 3) {
+    const response = await fetch(`https://v2.api.noroff.dev/blog/posts/iseeng?limit=${limit}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
       }
-    } catch (error) {
-      console.error('Error fetching posts:', error);
-    }
+    });
+    const data = await response.json();
+    return data.data; // Adjust based on your API response structure
   }
 
-  // Render carousel items
-  function renderCarouselItems() {
+  async function fetchLatestPosts() {
+    posts = await getPosts();
+    const carouselContainer = document.querySelector('.carousel');
     carouselContainer.innerHTML = posts.map(post => `
-      <div class="carousel-item">
-        <a href="/post/index.html?id=${post.id}">
+      <div class="carousel-item post-container">
+        <div class="post-content">
+          <a href="/post/index.html?id=${post.id}">
+            <h2>${post.title}</h2>
+          </a>
+          <p>${post.body.slice(0, 100)}...</p>
+          <a href="/post/index.html?id=${post.id}" class="latest-post-button">Read More</a>
+        </div>
+        <div class="post-image">
           <img src="${post.media.url}" alt="${post.media.alt}">
-          <h2>${post.title}</h2>
-        </a>
-        <p>${post.body.slice(0, 100)}...</p>
+        </div>
       </div>
     `).join('');
+    showCarouselItem(currentIndex); // Ensure the first item is displayed correctly
   }
 
-  // Show carousel item based on index
   function showCarouselItem(index) {
-    const totalItems = posts.length;
-    carouselContainer.style.transform = `translateX(-${index * 100}%)`;
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const totalItems = carouselItems.length;
+    carouselItems.forEach((item, i) => {
+      item.style.transform = `translateX(-${index * 100}%)`;
+    });
     currentIndex = index;
   }
 
-  // Show next item
   function showNextItem() {
     const nextIndex = (currentIndex + 1) % posts.length;
     showCarouselItem(nextIndex);
   }
 
-  // Show previous item
   function showPrevItem() {
     const prevIndex = (currentIndex - 1 + posts.length) % posts.length;
     showCarouselItem(prevIndex);
   }
 
-  // Event listeners for buttons
-  nextButton.addEventListener('click', showNextItem);
+  const prevButton = document.querySelector('.prev-button');
+  const nextButton = document.querySelector('.next-button');
+
   prevButton.addEventListener('click', showPrevItem);
+  nextButton.addEventListener('click', showNextItem);
 
   // Initial fetch and render
   fetchLatestPosts();
