@@ -3,23 +3,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevButton = document.querySelector('.prev-button');
   const nextButton = document.querySelector('.next-button');
   let currentIndex = 0;
-  let posts = [id];
+  let posts = [];
 
   // Fetch latest posts
   async function fetchLatestPosts() {
     try {
-      const response = await fetch(`https://v2.api.noroff.dev/blog/posts/iseeng/${id}`, {
+      const response = await fetch(`https://v2.api.noroff.dev/blog/posts/iseeng/?limit=3`, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
-          'X-Noroff-API-Key': apiKey.data.apiKey
         }
       });
-      if (response.ok) {
-        posts = await response.json();
-        renderCarouselItems();
+      if (response.status === 200) {
+        const data = await response.json();
+        console.log('API response:', data); // Log the API response
+        posts = data.data; // Extract the array of posts from the data property
+        if (Array.isArray(posts)) {
+          renderCarouselItems();
+        } else {
+          console.error('Unexpected response format:', data);
+        }
       } else {
-        console.error('Failed to fetch posts');
+        console.error('Failed to fetch posts:', response.status, response.statusText);
       }
     } catch (error) {
       console.error('Error fetching posts:', error);

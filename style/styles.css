@@ -32,7 +32,6 @@ header {
   border-bottom: 1px solid #1c2e35;
 }
 
-
 #header_logo {
   display: flex;
   align-items: center;
@@ -50,7 +49,6 @@ header {
   margin: 0;
 }
 
-
 button {
   margin-left: 10px;
   padding: 10px 20px;
@@ -66,8 +64,8 @@ button {
 
 #signindiv:not(.hidden),
 #creatediv:not(.hidden) {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* || Body */
@@ -76,7 +74,7 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3em;
-  margin-top: 18em;
+  margin-top: 5em;
 }
 
 /* Buttons */
@@ -90,14 +88,12 @@ button {
   border-style: none;
 }
 
-
-
 /* Carousel*/
 
 .carousel-container {
   position: relative;
-  width: 100%;
-  max-width: 800px;
+  width: 300px;
+  height: auto;
   margin: auto;
   overflow: hidden;
 }
@@ -119,23 +115,19 @@ button {
 
 .carousel-button {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 35%;
   background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 10px;
   cursor: pointer;
+  align-content: stretch;
 }
 
-.prev-button {
-  left: 10px;
-}
 
 .next-button {
   right: 10px;
 }
-
 
 /* || Footer */
 
@@ -157,15 +149,14 @@ button {
   height: 500px;
 }
 
-
 /* || Log in and register */
 
-.img_text_log_reg, .form_log_reg {
+.img_text_log_reg,
+.form_log_reg {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 5em;
-  ;
 }
 
 .img_log_reg {
@@ -173,10 +164,11 @@ button {
   width: 200px;
 }
 
-
-.text_login_register, .link_login_register, #login, #register  {
+.text_login_register,
+.link_login_register,
+#login,
+#register {
   text-transform: uppercase;
-
 }
 
 .link_login_register {
@@ -184,11 +176,10 @@ button {
   margin-top: 1em;
 }
 
-
-.buttons_login_register, input {
+.buttons_login_register,
+input {
   width: 600px;
   height: 50px;
-  
 }
 
 label {
@@ -204,7 +195,6 @@ form {
   flex-direction: column;
   align-items: flex-start;
 }
-
 
 /* || Media Queries */
 
