@@ -10,14 +10,14 @@ h2 {
   font-size: 20px;
 }
 
-p {
+p, .text_edit_create {
   font-size: 18px;
 }
 
 h1,
 h2,
 p,
-a {
+a, label, input {
   color: #1c2e35;
 }
 
@@ -231,6 +231,18 @@ button {
 #create_post {
   height: 500px;
 }
+
+.text_edit_create {
+
+}
+
+/* .vertical_line {
+  width: 1em;
+  height: 10em;
+  background-color: #1c2e35;
+  transform: rotate(90deg);
+  transform-origin: left center;
+} */
 
 /* || Log in and register */
 

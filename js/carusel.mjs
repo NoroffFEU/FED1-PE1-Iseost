@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
     const data = await response.json();
-    return data.data; // Adjust based on your API response structure
+    return data.data;
   }
 
   async function fetchLatestPosts() {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <a href="/post/index.html?id=${post.id}">
             <h2>${post.title}</h2>
           </a>
-          <p>${post.body.slice(0, 100)}...</p>
+          <p>${post.body.slice(0, 200)}...</p>
           <a href="/post/index.html?id=${post.id}" class="latest-post-button">Read More</a>
         </div>
         <div class="post-image">
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
     `).join('');
-    showCarouselItem(currentIndex); // Ensure the first item is displayed correctly
+    showCarouselItem(currentIndex);
   }
 
   function showCarouselItem(index) {
@@ -58,6 +58,5 @@ document.addEventListener('DOMContentLoaded', () => {
   prevButton.addEventListener('click', showPrevItem);
   nextButton.addEventListener('click', showNextItem);
 
-  // Initial fetch and render
   fetchLatestPosts();
 });
