@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
     <link rel="stylesheet" href="../style/styles.css" />
+    <script type="module" src="../js/header.mjs"></script>
     <script type="module" src="../js/register.mjs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,28 +14,7 @@
       rel="stylesheet"
     />
   </head>
-  <header>
-    <div id="header_logo">
-      <a href="../index.html"
-        ><img class="logo" src="../assits/6502423.jpg" alt="Logo"
-      /></a>
-      <p id="text_header">HotView Labs</p>
-    </div>
-    <div id="button_container">
-      <div id="signindiv" class="hidden">
-        <a href="./account/register.html"><button>Register</button></a>
-        <a href="./account/login.html"><button>LogIn</button></a>
-      </div>
-      <div id="creatediv" class="hidden">
-        <a href="./post/create.html"
-          ><button class="header_button">Create a new post</button></a
-        >
-        <a id="logout" href="#"
-          ><button class="header_button">Log out</button></a
-        >
-      </div>
-    </div>
-  </header>
+  <header id="app-header"></header>
   <body>
     <div class="img_text_log_reg">
       <img class="img_log_reg" src="../assits/6502423.jpg" alt="Logo" />

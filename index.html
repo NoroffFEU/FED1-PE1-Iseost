@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HotView Labs - Home</title>
     <link rel="stylesheet" href="./style/styles.css" />
+    <script type="module" src="./js/header.mjs"></script>
     <script type="module" src="./js/login.mjs"></script>
     <script type="module" src="./js/logout.mjs"></script>
     <script type="module" src="./js/register.mjs"></script>
-    <!-- <script type="module" src="./js/carusel.mjs"></script> -->
+    <script type="module" src="./js/carusel.mjs"></script>
     <script type="module" src="./js/indexhome.mjs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,29 +19,7 @@
     />
   </head>
   <body>
-    <header>
-      <div id="header_logo">
-        <img class="logo" src="./assits/6502423.jpg" alt="Logo" />
-        <p id="text_header">HotView Labs</p>
-      </div>
-      <div id="signindiv" class="hidden">
-        <a href="./account/register.html"
-          ><button id="register">Register</button></a
-        >
-        <a href="./account/login.html"><button id="login">LogIn</button></a>
-      </div>
-      <div id="creatediv" class="hidden">
-        <a href="./post/create.html"
-          ><button class="header_button">Create a new post</button></a
-        >
-        <a href="./post/edit.html"
-          ><button class="header_button">Edit a previous post</button></a
-        >
-        <a href="#"
-          ><button id="logout" class="header_button">Log out</button></a
-        >
-      </div>
-    </header>
+    <header id="app-header"></header>
     <main>
       <!--Section 1-->
       <h1>Lates post</h1>
