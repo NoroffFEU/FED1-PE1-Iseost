@@ -4,12 +4,11 @@ h1 {
   font-size: 22px;
 }
 
-h2 {
+h2, .label_text {
   font-size: 20px;
 }
 
-p,
-.text_edit_create {
+p {
   font-size: 18px;
 }
 
@@ -228,6 +227,10 @@ button {
 
 /* || Create and edit page */
 
+form {
+  margin-left: 2em;
+}
+
 .title {
   flex-direction: row;
   justify-content: center;
@@ -238,11 +241,25 @@ button {
   align-items: flex-start;
 }
 
-#create_post {
-  height: 500px;
+#create_post, #edit_post {
+  height: 250px;
+  width: 600px;
+  margin-bottom: 4em;
 }
 
-.text_edit_create {
+.label_text {
+  font-weight: 500;
+}
+
+
+#save_create, #save_edit {
+  margin: 0;
+  width: 600px;
+}
+
+#delete_post {
+  margin-top: 1em;
+  margin-left: 0;
 }
 
 /* .vertical_line {
@@ -301,12 +318,10 @@ form {
 
 footer {
   height: 20em;
-  background-color: #7cd7b1;
   margin-top: 5em;
   grid-template-columns: repeat(2, 1fr);
   justify-items: flex-start;
   align-items:center;
-  border-top: 1px solid;
   width: auto;
 }
 
@@ -321,6 +336,11 @@ footer {
   border-radius: 50%;
 }
 
+.title_address {
+  margin: 0;
+  padding-right: 75px;
+}
+
 .address {
   flex-direction: column;
   align-items: center;
@@ -331,43 +351,15 @@ footer {
 /* || Media Queries */
 
 @media (min-width: 300px) {
-  .desktop_text {
-    display: none;
-  }
+  
 }
 
 @media (min-width: 800px) {
   /* Tablet */
-  .desktop_text {
-    display: inline;
-    width: 485px;
-    height: 160px;
-  }
 
-  .lates_post_text {
-    display: none;
-  }
 }
 
 @media (min-width: 1100px) {
   /* Desktop */
-  .lates_post_container {
-    width: 1040px;
-    height: 450px;
-  }
-
-  .read-more {
-    width: 275px;
-    height: 40px;
-  }
-
-  .lates_post_text {
-    display: none;
-  }
-
-  .desktop_text {
-    display: inline;
-    width: 485px;
-    height: 160px;
-  }
+  
 }
