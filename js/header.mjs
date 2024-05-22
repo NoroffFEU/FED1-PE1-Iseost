@@ -10,9 +10,9 @@ function basePath() {
 }
 
 const appHeader = `
-    <div id="header_logo">
+    <div class="header_logo flex">
         <a href="${basePath()}index.html"><img class="logo" src="${basePath()}assets/6502423.jpg" alt="Logo"/></a>
-        <p id="text_header">HotView Labs</p>
+        <p class="text_header">HotView Labs</p>
     </div>
     <div id="button_container">
         <div id="signindiv" class="hidden">

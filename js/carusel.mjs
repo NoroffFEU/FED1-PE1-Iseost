@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     posts = await getPosts();
     const carouselContainer = document.querySelector('.carousel');
     carouselContainer.innerHTML = posts.map(post => `
-      <div class="carousel-item post-container">
+      <div class="carousel-item post-container flex background_color">
         <div class="post-content">
           <a href="/post/index.html?id=${post.id}">
             <h2>${post.title}</h2>

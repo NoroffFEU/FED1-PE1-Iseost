@@ -25,7 +25,7 @@
       <!--Section 1 end-->
       <!--Section 2 carousel-->
       <!-- Section for carousel -->
-      <div class="carousel-container">
+      <div class="carousel-container flex">
         <button class="carousel-button prev-button">Previous</button>
         <div class="carousel"></div>
         <button class="carousel-button next-button">Next</button>
@@ -33,11 +33,23 @@
       <!--Section 2 carousel end-->
       <!--Section 3-->
       <h2 class="title">Our latest post</h2>
-      <div id="blog_post_conatiner"></div>
+      <div id="blog_post_conatiner" class="grid"></div>
       <!--Section 3 end-->
     </main>
-    <footer>
-      &copy;
+    <footer class="grid">
+      <div class="flex logo_text_footer">
+        <img class="logo rounded" src="./assets/6502423.jpg" alt="Logo">
+        <p class="text_header">HotView Labs</p>
+      </div>
+      <div class="flex address">
+        <h2>Address</h2>
+        <p>HotView Labs
+          Level 5, Suite 327
+          Imperial Trade Center
+          Coruscant, Galactic City 110011
+          Sector 001, Core Worlds
+          Galactic Republic</p>
+      </div>
     </footer>
   </body>
 </html>

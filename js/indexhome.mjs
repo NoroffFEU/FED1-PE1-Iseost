@@ -24,6 +24,7 @@ function createBlogBox(coverImage, blogTitle, blogId) {
     //Blog image
     const card = document.createElement('div');
     card.classList.add("card");
+    card.classList.add("flex");
 
     const blogImage = document.createElement("img");
     blogImage.src = coverImage;
