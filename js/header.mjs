@@ -16,7 +16,8 @@ const appHeader = `
     </div>
     <div id="button_container">
         <div id="signindiv" class="hidden">
-            <a href="${basePath()}account/register.html"><button id="register">Register</button></a>
+            <a href="${basePath()}account/register.html"><button id="register" cl
+            >Register</button></a>
             <a href="${basePath()}account/login.html"><button id="login">LogIn</button></a>
         </div>
         <div id="creatediv" class="hidden">

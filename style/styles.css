@@ -120,6 +120,7 @@ button {
   padding: 10px 20px;
   margin-top: 10px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .carousel-button {
@@ -139,6 +140,24 @@ button {
 
 .next-button {
   right: 5em;
+}
+
+.buttons_login_register {
+  text-transform: uppercase;
+}
+
+.buttons_login_register,
+input {
+  width: 600px;
+  height: 50px;
+  margin-left: 0;
+}
+
+.button_post_content {
+  margin-top: 3em;
+  padding-bottom: 5em;
+  justify-content: center;
+  margin-right: 15em;
 }
 
 /* Carousel*/
@@ -223,12 +242,6 @@ button {
   width: 20em;
 }
 
-.button_post_content {
-  margin-top: 3em;
-  padding-bottom: 5em;
-  justify-content: center;
-  margin-right: 15em;
-}
 
 /* || Create and edit page */
 
@@ -266,6 +279,7 @@ form {
 #delete_post {
   margin-top: 1em;
   margin-left: 0;
+  margin-bottom: 5em;
 }
 
 /* .vertical_line {
@@ -298,13 +312,9 @@ form {
 .link_login_register {
   text-decoration: underline;
   margin-top: 1em;
+  margin-bottom: 5em;
 }
 
-.buttons_login_register,
-input {
-  width: 600px;
-  height: 50px;
-}
 
 label {
   margin-bottom: 1em;
@@ -489,5 +499,13 @@ footer {
   #edit_post {
     height: 18em;
     margin-bottom: 4em;
+  }
+
+  #delete_post {
+    margin-bottom: 3em;
+  }
+
+  .link_login_register {
+    margin-bottom: 3em;
   }
 }
