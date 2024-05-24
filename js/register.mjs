@@ -9,8 +9,8 @@ document.getElementById('register').addEventListener('click', function () {
     const email = document.getElementById('register_email').value;
     const password = document.getElementById('register_password').value;
     const name = document.getElementById('register_username').value;
-    
-    register(email, password, name) 
+
+    register(email, password, name)
 });
 
 //funksjon for api kall
@@ -20,16 +20,17 @@ async function register(email, password, name) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify ({
-            name:name,
-            email:email,
-            password:password
+        body: JSON.stringify({
+            name: name,
+            email: email,
+            password: password
         })
     });
     //Sender over til index side vis alt stemmer med api
     console.log(data);
-    if(data.status === 201){
+    if (data.status === 201) {
         window.location.replace('/account/login.html')
-    }
-}
+        console.log(data);
+    } 
 
+}
