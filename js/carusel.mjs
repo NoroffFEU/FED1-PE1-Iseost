@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const li = document.createElement('li');
       li.innerHTML = `<img src="${post.media.url}" alt="">
       <h2>${post.title}</h2>
-      <p>${post.body.substring(0,200)}</p>`
+      <p>${post.body.substring(0,200)}</p>
+      <a href="/post/index.html?id=${post.id}"><button>Read More</button></a>`
       li.classList.add('carousel-item');
       li.classList.add('flex');
       

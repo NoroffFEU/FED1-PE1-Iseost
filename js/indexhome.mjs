@@ -53,7 +53,7 @@ function createBlogBox(coverImage, blogTitle, blogText, blogButton, blogId) {
     button.classList.add("button_cover");
     button.innerText = blogButton;
 
-    button.addEventListener("click", function () {
+    content.addEventListener("click", function () {
         window.location.href = `/post/index.html?id=${blogId}`;
     });
 

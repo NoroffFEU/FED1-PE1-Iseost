@@ -17,6 +17,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.getElementById('edit_titlepost').addEventListener('input', function() {
+    document.getElementById('title_preview').innerText = document.getElementById('edit_titlepost').value;
+})
+
+document.getElementById('edit_post').addEventListener('input', function() {
+    document.getElementById('body_preview').innerText = document.getElementById('edit_post').value;
+})
+
+document.getElementById('edit_image').addEventListener('input', function() {
+    document.getElementById('image_preview').src = document.getElementById('edit_image').value;
+})
+
+
+
 async function loadPostData(postId) {
     try {
         const response = await fetch(`https://v2.api.noroff.dev/blog/posts/iseeng/${postId}`, {
@@ -31,8 +45,11 @@ async function loadPostData(postId) {
             const post = await response.json();
             console.log(post)
             document.getElementById('edit_titlepost').value = post.data.title;
+            document.getElementById('title_preview').innerText = document.getElementById('edit_titlepost').value;
             document.getElementById('edit_post').value = post.data.body;
+            document.getElementById('body_preview').innerText = document.getElementById('edit_post').value;
             document.getElementById('edit_image').value = post.data.media.url;
+            document.getElementById('image_preview').src = document.getElementById('edit_image').value;
             document.getElementById('edit_image_description').value = post.data.media.alt;
         } else {
             alert('Failed to load post data.');
