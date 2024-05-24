@@ -6,6 +6,7 @@
     <title>Welcome to HotView Labs!</title>
     <link rel="stylesheet" href="./style/styles.css" />
     <script type="module" src="./js/header.mjs"></script>
+    <script type="module" src="./js/footer.mjs"></script>
     <script type="module" src="./js/login.mjs"></script>
     <script type="module" src="./js/logout.mjs"></script>
     <script type="module" src="./js/register.mjs"></script>
@@ -19,23 +20,7 @@
     />
   </head>
   <body>
-    <header>
-      <div class="header_logo flex">
-        <a href="index.html"><img class="logo" src="assets/6502423.jpg" alt="Logo"/></a>
-        <p class="text_header">HotView Labs</p>
-    </div>
-    <div id="button_container">
-        <div id="signindiv" class="hidden">
-            <a href="account/register.html"><button id="register">Register</button></a>
-            <a href="account/login.html"><button id="login">LogIn</button></a>
-        </div>
-        <div id="creatediv" class="hidden">
-            <a href="post/create.html"><button class="header_button" id="create">Create a new post</button></a>
-            <a id="logout" href="#"><button class="header_button" id="logout">Log out</button></a>
-        </div>
-    </div>
-      <!--Hamburger menu-->
-      <!--Hamburger menu end-->
+    <header id="app-header">
     </header>
     <main>
       <!--Section 1 carousel-->
@@ -51,18 +36,7 @@
       <div id="blog_post_conatiner" class="grid"></div>
       <!--Section 2 end-->
     </main>
-    <footer class="grid">
-      <div class="flex logo_text_footer">
-        <img class="logo rounded" src="./assets/6502423.jpg" alt="Logo" />
-        <p class="text_header">HotView Labs</p>
-      </div>
-      <div class="flex address">
-        <h2 class="title_address">Address</h2>
-        <p>
-          HotView Labs Level 5, Suite 327 Imperial Trade Center Coruscant,
-          Galactic City 110011 Sector 001, Core Worlds Galactic Republic
-        </p>
-      </div>
+    <footer id="app-footer" class="grid">
     </footer>
   </body>
 </html>
