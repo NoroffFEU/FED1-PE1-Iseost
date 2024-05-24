@@ -126,8 +126,6 @@ button {
 
 .latest-post-button {
   display: inline-block;
-  width: 100px;
-  height: 20px;
   padding: 10px 20px;
   margin-top: 10px;
   text-align: center;
@@ -169,19 +167,37 @@ input {
   margin-left: 9em;
 }
 
+.carousel-buttons {
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
 /* Carousel*/
 
 .carousel-item {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
   height: 100%;
   width: 100%;
   flex: 1 0 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  background-color: #d9d9d9;
 }
+
+
+.carousel-item img {
+  height: 80%;
+  width: auto;
+}
+
 
 #carousel {
   height: calc(100vh - 2rem);
   width: 100%;
   display: flex;
-  overflow: scroll;
+  overflow-x: scroll;
   scroll-behavior: smooth;
   list-style: none;
   margin: 0;
@@ -189,67 +205,16 @@ input {
 }
 
 .carousel-container {
-  margin: 1rem;
+  margin: 3em 5em 0em 5em;
   position: relative;
   overflow: hidden;
 }
 
-/* #latest_post {
+.text_carousel {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-left: 15em;
-  padding-right: 15em;
-  margin: 5em 10em;
-  background-color: #d9d9d9;
-  height: 430px;
-} */
-
-/* .post-container {
-  flex-direction: row;
-  align-items: center;
-  padding-left: 2em;
-  padding-right: 2em;
-  margin: 5em 5em;
-  height: 430px;
+    flex-wrap: wrap;
 }
 
-.post-content {
-  flex: 1;
-  padding-right: 20px;
-}
-
-.post-content h2 {
-  margin: 0 0 10px;
-}
-
-.post-content p {
-  margin: 0 0 10px;
-}
-
-.post-image {
-  max-width: 200px;
-}
-
-.post-image img {
-  max-width: 100%;
-  height: auto;
-}
-
-.carousel-container {
-  overflow: hidden;
-  position: relative;
-}
-
-.carousel {
-  display: flex;
-  transition: transform 0.5s ease;
-  justify-content: center;
-}
-
-.carousel-item {
-  flex: 0 0 70%;
-} */
 
 /* || Post index pages*/
 
