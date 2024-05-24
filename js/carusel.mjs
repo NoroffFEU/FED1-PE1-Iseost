@@ -15,48 +15,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function fetchLatestPosts() {
     posts = await getPosts();
-    const carouselContainer = document.querySelector('.carousel');
-    carouselContainer.innerHTML = posts.map(post => `
-      <div class="carousel-item post-container flex background_color">
-        <div class="post-content">
-          <a href="/post/index.html?id=${post.id}">
-            <h2>${post.title}</h2>
-          </a>
-          <p>${post.body.slice(0, 200)}...</p>
-          <a href="/post/index.html?id=${post.id}" class="latest-post-button">Read More</a>
-        </div>
-        <div class="post-image">
-          <img src="${post.media.url}" alt="${post.media.alt}">
-        </div>
-      </div>
-    `).join('');
-    showCarouselItem(currentIndex);
-  }
+    const carouselContainer = document.getElementById('carousel');
+    const prevButton = document.getElementById('prev-button');
+    const nextButton = document.getElementById('next-button');
 
-  function showCarouselItem(index) {
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    const totalItems = carouselItems.length;
-    carouselItems.forEach((item, i) => {
-      item.style.transform = `translateX(-${index * 100}%)`;
+    posts.forEach(post => {
+      const li = document.createElement('li');
+      li.innerHTML = `<img src="${post.media.url}" alt="">
+      <h2>${post.title}</h2>
+      <p>${post.body.substring(0,200)}</p>`
+      li.classList.add('carousel-item');
+      li.classList.add('flex');
+      
+      carouselContainer.appendChild(li);
     });
-    currentIndex = index;
+
+    const latestPosts = document.querySelector('.carousel-item');
+
+    prevButton.addEventListener('click', function () {
+      if (currentIndex === 0) {
+        currentIndex = 2;
+        carouselContainer.scrollLeft += latestPosts.clientWidth * 2;
+      } else {
+        currentIndex -= 1;
+        carouselContainer.scrollLeft -= latestPosts.clientWidth;
+      }
+    })
+
+    nextButton.addEventListener('click', function () {
+      if (currentIndex === 2) {
+        currentIndex = 0;
+        carouselContainer.scrollLeft -= latestPosts.clientWidth * 2;
+      } else {
+        currentIndex += 1;
+        carouselContainer.scrollLeft += latestPosts.clientWidth;
+      }
+    })
   }
 
-  function showNextItem() {
-    const nextIndex = (currentIndex + 1) % posts.length;
-    showCarouselItem(nextIndex);
-  }
-
-  function showPrevItem() {
-    const prevIndex = (currentIndex - 1 + posts.length) % posts.length;
-    showCarouselItem(prevIndex);
-  }
-
-  const prevButton = document.querySelector('.prev-button');
-  const nextButton = document.querySelector('.next-button');
-
-  prevButton.addEventListener('click', showPrevItem);
-  nextButton.addEventListener('click', showNextItem);
-
-  fetchLatestPosts();
+  fetchLatestPosts()
 });
+
+
+

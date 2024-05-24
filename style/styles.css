@@ -1,5 +1,9 @@
 /* General */
 
+body {
+  max-width: 1440px;
+}
+
 h1 {
   font-size: 22px;
 }
@@ -84,7 +88,7 @@ header {
 #blog_post_conatiner {
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3em;
+  gap: 10em 0em;
   margin-top: 5em;
 }
 
@@ -166,7 +170,30 @@ input {
 
 /* Carousel*/
 
-#latest_post {
+.carousel-item {
+  height: 100%;
+  width: 100%;
+  flex: 1 0 100%;
+}
+
+#carousel {
+  height: calc(100vh - 2rem);
+  width: 100%;
+  display: flex;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  list-style: none;
+  margin: 0;
+  padding: 0; 
+}
+
+.carousel-container {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* #latest_post {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -175,9 +202,9 @@ input {
   margin: 5em 10em;
   background-color: #d9d9d9;
   height: 430px;
-}
+} */
 
-.post-container {
+/* .post-container {
   flex-direction: row;
   align-items: center;
   padding-left: 2em;
@@ -221,7 +248,7 @@ input {
 
 .carousel-item {
   flex: 0 0 70%;
-}
+} */
 
 /* || Post index pages*/
 
