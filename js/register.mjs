@@ -5,7 +5,8 @@
 //som poste til api - login
 
 //eventlister til registeringsknappen forteller hva den skal gjøre
-document.getElementById('register').addEventListener('click', function () {
+document.getElementById('register_button').addEventListener('click', function () {
+    console.log('hei');
     const email = document.getElementById('register_email').value;
     const password = document.getElementById('register_password').value;
     const name = document.getElementById('register_username').value;
