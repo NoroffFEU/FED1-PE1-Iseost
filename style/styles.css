@@ -93,7 +93,8 @@ header {
 }
 
 .cover,
-.cover_text, .cover_small_text {
+.cover_text,
+.cover_small_text {
   width: 320px;
 }
 
@@ -160,9 +161,7 @@ input {
 
 .button_post_content {
   margin-top: 3em;
-  padding-bottom: 5em;
-  justify-content: center;
-  margin-right: 15em;
+  margin-left: 9em;
 }
 
 /* Carousel*/
@@ -226,27 +225,34 @@ input {
 
 /* || Post index pages*/
 
+.main_post_content {
+  margin: 0;
+}
+
 #title {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3em;
+  text-align: center;
   margin-top: 0;
-  padding-top: 5em;
+  padding-top: 3em;
 }
 
 .post_content {
-  justify-content: space-evenly;
+  gap: 2em;
+  margin: 5em 10em 3em 10em;
 }
 
 #content {
-  white-space: break-spaces;
-  width: 50em;
+  flex: 1;
 }
 
 #image {
-  width: 20em;
+  max-width: 100%;
+  height: auto;
 }
 
+.post_info {
+  flex-direction: column;
+  margin-left: 10em;
+}
 
 /* || Create and edit page */
 
@@ -319,7 +325,6 @@ form {
   margin-top: 1em;
   margin-bottom: 5em;
 }
-
 
 label {
   margin-bottom: 1em;
@@ -423,7 +428,9 @@ footer {
     align-items: center;
   }
 
-  .cover, .cover_text, .cover_small_text {
+  .cover,
+  .cover_text,
+  .cover_small_text {
     width: 250px;
   }
 
@@ -433,7 +440,12 @@ footer {
   }
 
   .button_post_content {
-    margin-right: 0;
+    margin-left: 125px;
+  }
+
+  .post_info {
+    flex-direction: column;
+    margin-left: 135px;
   }
 }
 

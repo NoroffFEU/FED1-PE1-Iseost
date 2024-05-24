@@ -15,18 +15,26 @@
     />
   </head>
   <body>
-      <header id="app-header"></header>
+    <header id="app-header">
+    </header>
     <main>
-      <h1 id="title"></h1>
-      <div class="post_content flex">
-      <img id="image" src="" alt="" />
-      <div id="content"></div>
-    </div>
-    <div class="button_post_content flex">
-      <a id="edit_button" class="hidden"><button>Edit this post</button></a>
-    </div>
+      <div class="main_post_content">
+        <h1 id="title"></h1>
+        <div class="post_content flex">
+        <img id="image" src="" alt="" />
+        <div id="content"></div>
+      </div>
+      <div class="post_info flex">
+        <p id="author"></p>
+        <p id="created"></p>
+        <p id="updated"></p>
+        <a id="share" href="#"></a>
+      </div>
+      <div class="button_post_content flex">
+        <a id="edit_button" class="hidden"><button>Edit this post</button></a>
+      </div>
+    </main>
   </body>
-  </main>
   <footer class="grid">
     <div class="flex logo_text_footer">
       <img class="logo rounded" src="../assets/6502423.jpg" alt="Logo" />
