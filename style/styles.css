@@ -448,7 +448,6 @@ footer {
   #blog_post_conatiner {
     grid-template-columns: repeat(2, 1fr);
     gap: 2em 1em;
-    margin-left: 22px;
   }
 
   .post_content {
@@ -515,7 +514,6 @@ footer {
   #blog_post_conatiner {
     grid-template-columns: repeat(1, 1fr);
     gap: 2em;
-    margin-left: 3em;
   }
 
   #content {
