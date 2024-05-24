@@ -16,10 +16,14 @@ async function getPostes() {
 
 
 //Blog boxes
-function createBlogBox(coverImage, blogTitle, blogId) {
+function createBlogBox(coverImage, blogTitle, blogText, blogButton, blogId) {
     const content = document.getElementById("blog_post_conatiner");
 
+    const maxLength = 100;
 
+    const cutText = blogText.length > maxLength
+    ? blogText.substring(0, maxLength) + "..."
+    : blogText;
 
     //Blog image
     const card = document.createElement('div');
@@ -36,13 +40,27 @@ function createBlogBox(coverImage, blogTitle, blogId) {
 
     card.appendChild(blogImage);
 
-    //Blog title
+    //Blog title, text and button
     const title = document.createElement("h2");
     title.classList.add('cover_text');
     title.innerText = blogTitle;
 
+    const smallText = document.createElement("p");
+    smallText.classList.add("cover_small_text");
+    smallText.innerText = cutText;
+
+    const button = document.createElement("button");
+    button.classList.add("button_cover");
+    button.innerText = blogButton;
+
+    button.addEventListener("click", function () {
+        window.location.href = `/post/index.html?id=${blogId}`;
+    });
+
 
     card.appendChild(title);
+    card.appendChild(smallText);
+    card.appendChild(button);
 
     content.appendChild(card);
 
@@ -53,7 +71,8 @@ async function createPostes() {
 
 
     blogs.forEach((blog) => {
-        createBlogBox(blog.media.url, blog.title, blog.id);
+        const buttonText = "Read More"
+        createBlogBox(blog.media.url, blog.title, blog.body, buttonText, blog.id);
     });
 
 }

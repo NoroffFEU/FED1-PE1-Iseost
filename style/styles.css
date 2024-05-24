@@ -24,6 +24,7 @@ input {
 
 main {
   background-color: #f7f7f8;
+  padding-bottom: 5em;
 }
 
 .flex {
@@ -92,8 +93,8 @@ header {
 }
 
 .cover,
-.cover_text {
-  width: 300px;
+.cover_text, .cover_small_text {
+  width: 320px;
 }
 
 /* Buttons */
@@ -111,6 +112,10 @@ button {
   margin-left: 10px;
   padding: 10px 20px;
   font-size: 1em;
+}
+
+.button_cover {
+  margin-left: 0;
 }
 
 .latest-post-button {
@@ -418,7 +423,7 @@ footer {
     align-items: center;
   }
 
-  .cover {
+  .cover, .cover_text, .cover_small_text {
     width: 250px;
   }
 
