@@ -182,6 +182,7 @@ input {
 .carousel-item img {
   height: 80%;
   width: auto;
+  padding-right: 10em;
 }
 
 #carousel {
@@ -203,6 +204,7 @@ input {
 
 .text_carousel {
   flex-wrap: wrap;
+  padding: 1em 10em 1em 10em;
 }
 
 /* || Post index pages*/
@@ -427,6 +429,11 @@ footer {
   button {
     padding: 8px 10px;
     font-size: 14px;
+  }
+
+  .carousel-item img,
+  .text_carousel {
+    padding: 0;
   }
 
   #blog_post_conatiner {
