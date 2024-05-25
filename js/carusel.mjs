@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     posts.forEach(post => {
       const li = document.createElement('li');
       li.innerHTML = `<img src="${post.media.url}" alt="">
-      <div class="text_carousel"><h2>${post.title}</h2>
+      <div class="text_carousel flex"><h2>${post.title}</h2>
       <p>${post.body.substring(0,200)}</p>
       <a href="/post/index.html?id=${post.id}"><button class="latest-post-button">Read More</button></a></div>`
       li.classList.add('carousel-item');

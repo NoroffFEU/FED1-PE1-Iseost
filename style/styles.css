@@ -44,6 +44,11 @@ main {
   color: #1c2e35;
 }
 
+.color_button_faded {
+  background-color: rgba(28, 46, 053, 0.5);
+  border-style: none; 
+}
+
 .background_color {
   background-color: #d9d9d9;
 }
@@ -132,16 +137,7 @@ button {
   text-transform: uppercase;
 }
 
-.carousel-button {
-  position: absolute;
-  top: 35%;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  align-content: stretch;
-}
+
 
 .prev-button {
   left: 3em;
@@ -167,15 +163,29 @@ input {
   margin-left: 9em;
 }
 
+
 .carousel-buttons {
+  position: absolute;
+  top: 91%;
+  right: 5px;
+  width: 100%;
   justify-content: space-between;
-  margin-top: 1em;
 }
 
-/* Carousel*/
+
+
+/* || Carousel */
+
+.carousel-container {
+  margin: 0em 5em 0em 5em;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .carousel-item {
-  display: flex;
   flex-direction: row-reverse;
   align-items: center;
   height: 100%;
@@ -186,33 +196,24 @@ input {
   background-color: #d9d9d9;
 }
 
-
 .carousel-item img {
   height: 80%;
   width: auto;
 }
 
-
 #carousel {
-  height: calc(100vh - 2rem);
+  height: calc(100vh - 35rem);
   width: 100%;
   display: flex;
-  overflow-x: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   list-style: none;
   margin: 0;
-  padding: 0; 
-}
-
-.carousel-container {
-  margin: 3em 5em 0em 5em;
-  position: relative;
-  overflow: hidden;
+  padding: 5em 0em 0em 0em; 
 }
 
 .text_carousel {
-  display: flex;
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 
