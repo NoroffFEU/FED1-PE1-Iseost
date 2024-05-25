@@ -17,30 +17,34 @@
   <header id="app-header"></header>
   <body>
     <h1 class="title flex">Edit Post</h1>
-    <form class="post_inputs flex" method="post" action="/">
-      <label class="label_text" for="edit_titlepost">Title</label>
-      <input type="text" id="edit_titlepost" placeholder="Your title" />
-      <label class="label_text" for="edit_post">Content</label>
-      <textarea id="edit_post" placeholder="Write your content here"></textarea>
-      <label class="label_text" for="edit_image">Image link</label>
-      <input
+    <div class="preview_container flex">
+      <form class="post_inputs flex" method="post" action="/">
+        <label class="label_text" for="edit_titlepost">Title</label>
+        <input type="text" id="edit_titlepost" placeholder="Your title" />
+        <label class="label_text" for="edit_post">Content</label>
+        <textarea id="edit_post" placeholder="Write your content here"></textarea>
+        <label class="label_text" for="edit_image">Image link</label>
+        <input
         type="text"
         id="edit_image"
         placeholder="URL address for your image"
-      />
-      <input
+        />
+        <input
         type="text"
         id="edit_image_description"
         placeholder="Add a description for your image"
-      />
-      <button id="save_edit" class="button_color" type="button">Save</button>
-      <button id="delete_post" class="button_color" type="button">Delete this post</button>
-    </form>
-    <!-- <div class="vertical_line"></div> -->
-    <div id="preview">
-      <p id="title_preview"></p>
-      <p id="body_preview"></p>
-      <img id="image_preview" src="" alt="">
+        />
+        <button id="save_edit" class="button_color" type="button">Save</button>
+        <button id="delete_post" class="button_color" type="button">Delete this post</button>
+      </form>
+      <!-- <div class="vertical_line"></div> -->
+      <div id="preview" class="view_container">
+        <h2 id="title_preview"></h2>
+        <div class="post_content_pre flex">
+          <img id="image_preview" src="" alt="">
+          <p id="body_preview"></p>
+        </div>
+      </div>
     </div>
   </body>
   <footer class="grid">

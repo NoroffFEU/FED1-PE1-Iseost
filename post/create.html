@@ -17,27 +17,33 @@
   <header id="app-header"></header>
   <body>
     <h1 class="title flex">Create a new post</h1>
-    <form class="post_inputs flex" method="post" action="/">
-      <label class="label_text" for="create_titlepost">Title</label>
-      <input type="text" id="create_titlepost" placeholder="Your title" />
-      <label class="label_text" for="create_post">Content</label>
-      <textarea
-        id="create_post"
-        placeholder="Write your content here"
-      ></textarea>
-      <label class="label_text" for="create_image">Image link</label>
-      <input
-        type="text"
-        id="create_image"
-        placeholder="URL address for your image"
-      />
-      <input type="text" placeholder="Add a description for your image" />
-      <button id="save_create" class="button_color" type="button">Save</button>
-    </form>
-    <div id="preview">
-      <p id="title_preview"></p>
-      <p id="body_preview"></p>
-      <img id="image_preview" src="" alt="">
+    <div class="preview_container flex">
+      <form class="post_inputs flex" method="post" action="/">
+        <label class="label_text" for="create_titlepost">Title</label>
+        <input type="text" id="create_titlepost" placeholder="Your title" />
+        <label class="label_text" for="create_post">Content</label>
+        <textarea
+          id="create_post"
+          placeholder="Write your content here"
+        ></textarea>
+        <label class="label_text" for="create_image">Image link</label>
+        <input
+          type="text"
+          id="create_image"
+          placeholder="URL address for your image"
+        />
+        <input type="text" placeholder="Add a description for your image" />
+        <button id="save_create" class="button_color" type="button">
+          Save
+        </button>
+      </form>
+      <div id="preview" class="view_container">
+        <h2 id="title_preview"></h2>
+        <div class="post_content_pre flex">
+          <img id="image_preview" src="" alt="" />
+          <p id="body_preview"></p>
+        </div>
+      </div>
     </div>
   </body>
   <footer class="grid">

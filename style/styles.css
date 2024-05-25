@@ -278,6 +278,36 @@ form {
   margin-bottom: 5em;
 }
 
+.preview_container {
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.view_container {
+  flex-direction: column-reverse;
+  margin-left: 1em;
+  margin-bottom: 5em;
+  border: 1px solid #ddd;
+}
+
+.view_container p {
+  margin: 0.5rem 0;
+}
+
+.view_container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.post_content_pre {
+  margin: 2em 0em 3em 2em;
+  column-gap: 2em;
+}
+
+#title_preview {
+  padding-left: 15em;
+}
+
 /* .vertical_line {
   width: 1em;
   height: 10em;
