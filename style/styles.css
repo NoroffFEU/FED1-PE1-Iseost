@@ -175,12 +175,10 @@ input {
   background-color: #d9d9d9;
 }
 
-
 .carousel-item img {
   height: 80%;
   width: auto;
 }
-
 
 #carousel {
   height: calc(100vh - 35rem);
@@ -190,7 +188,7 @@ input {
   scroll-behavior: smooth;
   list-style: none;
   margin: 0;
-  padding: 5em 0em 0em 0em; 
+  padding: 5em 0em 0em 0em;
 }
 
 .carousel-container {
@@ -231,6 +229,7 @@ input {
 
 .post_info {
   flex-direction: column;
+  flex-wrap: nowrap;
   margin-left: 10em;
 }
 
@@ -453,7 +452,7 @@ footer {
 
   .post_info {
     flex-direction: column;
-    margin-left: 135px;
+    margin-left: 9rem;
   }
 }
 
@@ -484,12 +483,23 @@ footer {
     margin-right: 10px;
   }
 
-  button {
+  header {
+    padding: 1em;
   }
 
   .post_content {
     flex-direction: column;
+    margin: 1em;
+  }
+
+  .post_info {
+    margin-left: 0;
+    margin-top: 1em;
     align-items: center;
+  }
+
+  #image {
+    max-width: fit-content;
   }
 
   #blog_post_conatiner {
@@ -534,6 +544,10 @@ footer {
   }
 
   form {
+    margin: 0;
+  }
+
+  .carousel-container {
     margin: 0;
   }
 }
