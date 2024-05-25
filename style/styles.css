@@ -23,7 +23,7 @@ h2,
 p,
 a,
 label,
-input {
+input, div {
   color: #1c2e35;
 }
 
@@ -38,15 +38,6 @@ main {
 
 .grid {
   display: grid;
-}
-
-.button_color {
-  color: #1c2e35;
-}
-
-.color_button_faded {
-  background-color: rgba(28, 46, 053, 0.5);
-  border-style: none; 
 }
 
 .background_color {
@@ -110,23 +101,28 @@ header {
 
 /* Buttons */
 
-button,
-.latest-post-button {
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
   cursor: pointer;
-  background-color: #1c2e35;
   color: white;
   text-decoration: none;
   border-radius: 5px;
 }
 
-button {
-  margin-left: 10px;
-  padding: 10px 20px;
-  font-size: 1em;
+.button_color {
+  background-color: #1c2e35;
 }
 
-.button_cover {
-  margin-left: 0;
+.color_button_faded {
+  background-color: rgba(28, 46, 053, 0.5);
+  border-style: none; 
+}
+
+
+.margin_button {
+  margin-right: 1em;
 }
 
 .latest-post-button {
@@ -137,15 +133,6 @@ button {
   text-transform: uppercase;
 }
 
-
-
-.prev-button {
-  left: 3em;
-}
-
-.next-button {
-  right: 5em;
-}
 
 .buttons_login_register {
   text-transform: uppercase;
@@ -170,6 +157,10 @@ input {
   right: 5px;
   width: 100%;
   justify-content: space-between;
+}
+
+#prev_button, #next_button {
+  height: 1em;
 }
 
 

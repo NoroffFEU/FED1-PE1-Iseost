@@ -24,9 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
       li.innerHTML = `<img src="${post.media.url}" alt="">
       <div class="text_carousel flex"><h2>${post.title}</h2>
       <p>${post.body.substring(0,200)}</p>
-      <a href="/post/index.html?id=${post.id}"><button class="latest-post-button">Read More</button></a></div>`
+      <a href="/post/index.html?id=${post.id}"><button class="latest-post-button button_color">Read More</button></a></div>`
       li.classList.add('carousel-item');
       li.classList.add('flex');
+
+      addEventListener("click", function () {
+        window.location.href = `/post/index.html?id=${post.id}`;
+    });
       
       carouselContainer.appendChild(li);
     });

@@ -50,10 +50,10 @@ function createBlogBox(coverImage, blogTitle, blogText, blogButton, blogId) {
     smallText.innerText = cutText;
 
     const button = document.createElement("button");
-    button.classList.add("button_cover");
+    button.classList.add("button_color");
     button.innerText = blogButton;
 
-    content.addEventListener("click", function () {
+    addEventListener("click", function () {
         window.location.href = `/post/index.html?id=${blogId}`;
     });
 
