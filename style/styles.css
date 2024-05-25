@@ -153,10 +153,8 @@ input {
 }
 
 .carousel-buttons {
-  position: absolute;
-  top: 93%;
-  width: 100%;
   justify-content: space-between;
+  margin-top: 1em;
 }
 
 #prev_button,
@@ -165,15 +163,6 @@ input {
 }
 
 /* || Carousel */
-
-.carousel-container {
-  margin: 0em 5em 0em 5em;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
 .carousel-item {
   flex-direction: row-reverse;
@@ -186,10 +175,12 @@ input {
   background-color: #d9d9d9;
 }
 
+
 .carousel-item img {
   height: 80%;
   width: auto;
 }
+
 
 #carousel {
   height: calc(100vh - 35rem);
@@ -199,7 +190,13 @@ input {
   scroll-behavior: smooth;
   list-style: none;
   margin: 0;
-  padding: 5em 0em 0em 0em;
+  padding: 5em 0em 0em 0em; 
+}
+
+.carousel-container {
+  margin: 3em 5em 0em 5em;
+  position: relative;
+  overflow: hidden;
 }
 
 .text_carousel {
