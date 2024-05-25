@@ -6,6 +6,7 @@
     <title>Create a new blog post</title>
     <link rel="stylesheet" href="../style/styles.css" />
     <script type="module" src="../js/header.mjs"></script>
+    <script type="module" src="../js/footer.mjs"></script>
     <script type="module" src="../js/createpost.mjs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,49 +15,39 @@
       rel="stylesheet"
     />
   </head>
-  <header id="app-header"></header>
   <body>
-    <h1 class="title flex">Create a new post</h1>
-    <div class="preview_container flex">
-      <form class="post_inputs flex" method="post" action="/">
-        <label class="label_text" for="create_titlepost">Title</label>
-        <input type="text" id="create_titlepost" placeholder="Your title" />
-        <label class="label_text" for="create_post">Content</label>
-        <textarea
-          id="create_post"
-          placeholder="Write your content here"
-        ></textarea>
-        <label class="label_text" for="create_image">Image link</label>
-        <input
-          type="text"
-          id="create_image"
-          placeholder="URL address for your image"
-        />
-        <input type="text" placeholder="Add a description for your image" />
-        <button id="save_create" class="button_color" type="button">
-          Save
-        </button>
-      </form>
-      <div id="preview" class="view_container">
-        <h2 id="title_preview"></h2>
-        <div class="post_content_pre flex">
-          <img id="image_preview" src="" alt="" />
-          <p id="body_preview"></p>
+    <header id="app-header"></header>
+    <main>
+      <h1 class="title flex">Create a new post</h1>
+      <div class="preview_container flex">
+        <form class="post_inputs flex" method="post" action="/">
+          <label class="label_text" for="create_titlepost">Title</label>
+          <input type="text" id="create_titlepost" placeholder="Your title" />
+          <label class="label_text" for="create_post">Content</label>
+          <textarea
+            id="create_post"
+            placeholder="Write your content here"
+          ></textarea>
+          <label class="label_text" for="create_image">Image link</label>
+          <input
+            type="text"
+            id="create_image"
+            placeholder="URL address for your image"
+          />
+          <input type="text" placeholder="Add a description for your image" />
+          <button id="save_create" class="button_color" type="button">
+            Save
+          </button>
+        </form>
+        <div id="preview" class="view_container">
+          <h2 id="title_preview"></h2>
+          <div class="post_content_pre flex">
+            <img id="image_preview" src="" alt="" />
+            <p id="body_preview"></p>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
   </body>
-  <footer class="grid">
-    <div class="flex logo_text_footer">
-      <img class="logo rounded" src="../assets/6502423.jpg" alt="Logo" />
-      <p class="text_header">HotView Labs</p>
-    </div>
-    <div class="flex address">
-      <h2 class="title_address">Address</h2>
-      <p>
-        HotView Labs Level 5, Suite 327 Imperial Trade Center Coruscant,
-        Galactic City 110011 Sector 001, Core Worlds Galactic Republic
-      </p>
-    </div>
-  </footer>
+  <footer id="app-footer" class="grid"></footer>
 </html>

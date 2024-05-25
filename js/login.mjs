@@ -27,6 +27,7 @@ async function login(email, password) {
             password:password
         })
     });
+
     //Sender over til homepage vis alt stemmer med api
     if(data.status === 200){
         const tech = await data.json();
@@ -39,3 +40,13 @@ async function login(email, password) {
 
 }
 
+// if (response.status === 200) {
+//             alert('Post updated successfully.');
+//             window.location.replace(`/post/index.html?id=${postId}`);
+//         } else {
+//             alert('Failed to update post.');
+//         }
+//     } catch (error) {
+//         console.error('Error updating post:', error);
+//     }
+// }

@@ -2,7 +2,7 @@
 
 const appFooter = `
     <div class="flex logo_text_footer">
-    <img class="logo rounded" src="./assets/6502423.jpg" alt="Logo" />
+    <img class="logo rounded" src="../assets/6502423.jpg" alt="Logo" />
     <p class="text_header">HotView Labs</p>
   </div>
   <div class="flex address">

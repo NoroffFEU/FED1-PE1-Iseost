@@ -6,6 +6,8 @@
     <title>Log In here!</title>
     <link rel="stylesheet" href="../style/styles.css" />
     <script type="module" src="../js/login.mjs"></script>
+    <script type="module" src="../js/header.mjs"></script>
+    <script type="module" src="../js/footer.mjs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,69 +15,44 @@
       rel="stylesheet"
     />
   </head>
-  <header>
-    <div class="header_logo flex">
-      <a href="../index.html"
-        ><img class="logo" src="../assets/6502423.jpg" alt="Logo"
-      /></a>
-      <p class="text_header">HotView Labs</p>
-    </div>
-    <div id="button_container">
-      <div id="signindiv" class="hidden">
-        <a href="./account/register.html"><button>Register</button></a>
-        <a href="./account/login.html"><button>LogIn</button></a>
-      </div>
-      <div id="creatediv" class="hidden">
-        <a href="./post/create.html"
-          ><button class="header_button">Create a new post</button></a
-        >
-        <a id="logout" href="#"
-          ><button class="header_button">Log out</button></a
-        >
-      </div>
-    </div>
-  </header>
   <body>
-    <div class="img_text_log_reg flex">
-      <img class="img_log_reg" src="../assets/6502423.jpg" alt="Logo" />
-      <p>Log Into HotView Labs</p>
-    </div>
-    <div class="form_log_reg flex">
-      <form method="post" action="/">
-        <label class="text_login_register" for="login_email"
-          >email address</label
+    <header id="app-header"></header>
+    <main>
+      <div class="img_text_log_reg flex">
+        <img class="img_log_reg" src="../assets/6502423.jpg" alt="Logo" />
+        <p>Log Into HotView Labs</p>
+      </div>
+      <div class="form_log_reg flex">
+        <form method="post" action="/">
+          <label class="text_login_register" for="login_email"
+            >email address</label
+          >
+          <input
+            type="email"
+            text_login_register
+            id="login_email"
+            placeholder="name@example.com"
+          />
+          <label class="text_login_register" for="login_password"
+            >Password</label
+          >
+          <input type="password" id="login_password" placeholder="Password" />
+          <button
+            id="login"
+            class="buttons_login_register button_color"
+            type="button"
+          >
+            log in
+          </button>
+        </form>
+        <p class="text_login_register">
+          Can't log in? Maybe your not registered!
+        </p>
+        <a class="link_login_register" href="../account/register.html"
+          >register here</a
         >
-        <input
-          type="email"
-          text_login_register
-          id="login_email"
-          placeholder="name@example.com"
-        />
-        <label class="text_login_register" for="login_password">Password</label>
-        <input type="password" id="login_password" placeholder="Password" />
-        <button id="login" class="buttons_login_register button_color" type="button">
-          log in
-        </button>
-      </form>
-      <p class="text_login_register">
-        Can't log in? Maybe your not registered!
-      </p>
-      <a class="link_login_register" href="../account/register.html"
-        >register here</a
-      >
-    </div>
+      </div>
+    </main>
   </body>
-  <footer class="grid">
-    <div class="flex logo_text_footer">
-      <img class="logo rounded" src="../assets/6502423.jpg" alt="Logo" />
-      <p class="text_header">HotView Labs</p>
-    </div>
-    <div class="flex address">
-      <h2 class="title_address">Address</h2>
-      <p>
-        HotView Labs Level 5, Suite 327 Imperial Trade Center Coruscant,
-        Galactic City 110011 Sector 001, Core Worlds Galactic Republic
-      </p>
-    </div>
-  </footer>
+  <footer id="app-footer" class="grid"></footer>
 </html>
