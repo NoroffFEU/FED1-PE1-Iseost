@@ -37,6 +37,10 @@ async function get_blogpost(id) {
         const updatedbox = document.getElementById('updated')
         const sharebox = document.getElementById('share')
         const editbutton = document.getElementById('edit_button')
+
+        editbutton.addEventListener("click", function () {
+            window.location.href = `/post/edit.html?id=${id}`;
+        });
        
         titlebox.innerHTML = title;
         blogbox.innerHTML = body;
