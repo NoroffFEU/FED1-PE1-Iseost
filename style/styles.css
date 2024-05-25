@@ -83,11 +83,15 @@ header {
 
 /* || Body */
 
+.title_blog_postes {
+  margin-top: 10em;
+  padding-left: 4em;
+}
+
 #blog_post_conatiner {
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
   gap: 10em 0em;
-  margin-top: 5em;
 }
 
 .card {
@@ -150,8 +154,7 @@ input {
 
 .carousel-buttons {
   position: absolute;
-  top: 91%;
-  right: 5px;
+  top: 93%;
   width: 100%;
   justify-content: space-between;
 }
@@ -407,9 +410,6 @@ footer {
 
   p {
     font-size: 15px;
-  }
-
-  header {
   }
 
   .text_header {
