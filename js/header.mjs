@@ -16,12 +16,12 @@ const appHeader = `
     </div>
     <div id="button_container">
         <div id="signindiv" class="hidden">
-            <a href="${basePath()}account/register.html"><button id="register" class="button_color margin_button"
+            <a href="${basePath()}account/register.html"><button id="register" class="button_color margin_button_signin"
             >Register</button></a>
             <a href="${basePath()}account/login.html"><button id="login" class="button_color">LogIn</button></a>
         </div>
         <div id="creatediv" class="hidden">
-            <a href="${basePath()}post/create.html"><button class="button_color margin_button" id="create">Create a new post</button></a>
+            <a href="${basePath()}post/create.html"><button class="button_color margin_button_create" id="create">Create a new post</button></a>
             <a id="logout" href="#"><button class="button_color" id="logout">Log out</button></a>
         </div>
     </div>

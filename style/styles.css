@@ -124,8 +124,12 @@ button {
   border-style: none;
 }
 
-.margin_button {
+.margin_button_signin {
   margin-right: 1em;
+}
+
+.margin_button_create {
+  margin-right: 6px;
 }
 
 .latest-post-button {
@@ -549,5 +553,9 @@ footer {
 
   .carousel-container {
     margin: 0;
+  }
+
+  .view_container {
+    display: none;
   }
 }
