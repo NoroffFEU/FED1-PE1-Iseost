@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       li.classList.add('carousel-item');
       li.classList.add('flex');
 
-      addEventListener("click", function () {
+      li.addEventListener("click", function () {
         window.location.href = `/post/index.html?id=${post.id}`;
     });
       
@@ -60,6 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fetchLatestPosts()
 });
+
+
+
 
 
 

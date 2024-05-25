@@ -149,7 +149,7 @@ input {
 
 .button_post_content {
   margin-top: 3em;
-  margin-left: 9em;
+  margin-left: 10em;
 }
 
 .carousel-buttons {
@@ -194,7 +194,7 @@ input {
 }
 
 .carousel-container {
-  margin: 3em 5em 0em 5em;
+  margin: 0em 5em 0em 5em;
   position: relative;
   overflow: hidden;
 }
@@ -531,5 +531,9 @@ footer {
 
   .link_login_register {
     margin-bottom: 3em;
+  }
+
+  form {
+    margin: 0;
   }
 }

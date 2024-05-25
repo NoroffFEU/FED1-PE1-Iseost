@@ -31,6 +31,6 @@ async function register(email, password, name) {
     if (data.status === 201) {
         window.location.replace('/account/login.html')
         console.log(data);
-    } 
+    }
 
 }

@@ -53,10 +53,9 @@ function createBlogBox(coverImage, blogTitle, blogText, blogButton, blogId) {
     button.classList.add("button_color");
     button.innerText = blogButton;
 
-    addEventListener("click", function () {
+    button.addEventListener("click", function () {
         window.location.href = `/post/index.html?id=${blogId}`;
     });
-
 
     card.appendChild(title);
     card.appendChild(smallText);
