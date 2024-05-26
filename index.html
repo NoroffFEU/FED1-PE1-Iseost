@@ -10,8 +10,7 @@
     <script type="module" src="./js/login.mjs"></script>
     <script type="module" src="./js/logout.mjs"></script>
     <script type="module" src="./js/register.mjs"></script>
-    <script type="module" src="./js/carusel.mjs"></script>
-    <script type="module" src="./js/indexhome.mjs"></script>
+    <script type="module" src="./js/blogposts.mjs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,5 +36,14 @@
       <!--Section 2 end-->
     </main>
     <footer id="app-footer" class="grid"></footer>
+
+    <script type="module">
+      import { initApp } from "./js/blogposts.mjs";
+
+      (async function() {
+        await initApp();
+      })();
+    </script>
+
   </body>
 </html>
