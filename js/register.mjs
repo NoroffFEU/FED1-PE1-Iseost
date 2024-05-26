@@ -10,7 +10,7 @@ document.getElementById('register_button').addEventListener('click', function ()
     const password = document.getElementById('register_password').value;
     const name = document.getElementById('register_username').value;
 
-    register(email, password, name)
+    register(email, password, name);
 });
 
 //funksjon for api kall
@@ -30,7 +30,9 @@ async function register(email, password, name) {
     console.log(data);
     if (data.status === 201) {
         window.location.replace('/account/login.html')
-        console.log(data);
+        alert('Welcome! You will now be sent back to the login.')
+    } else {
+        document.getElementById('error_message_reg').textContent = 'Make sure that your email is a stud.noroff mail and your password has 8 character.'
     }
-
+    
 }

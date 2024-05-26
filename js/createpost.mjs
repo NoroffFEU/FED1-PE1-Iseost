@@ -1,6 +1,6 @@
 
 
-document.getElementById('save_create').addEventListener('click', function() {
+document.getElementById('save_create').addEventListener('click', function () {
     const title = document.getElementById('create_titlepost').value;
     const content = document.getElementById('create_post').value;
     const image = document.getElementById('create_image').value;

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const postId = new URLSearchParams(window.location.search).get('id');
     loadPostData(postId);
 

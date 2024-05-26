@@ -36,6 +36,8 @@ async function login(email, password) {
         localStorage.setItem('accessToken', token);
         localStorage.setItem('username', name);
         window.location.replace('/index.html')
+    } else {
+        document.getElementById('error_message_login').textContent = 'Failed to login. Email address or password is wrong. Please try again'
     }
 
 }

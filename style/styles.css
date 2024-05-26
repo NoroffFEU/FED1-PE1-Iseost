@@ -14,7 +14,7 @@ h2,
   font-size: 20px;
 }
 
-p {
+p, .message {
   font-size: 18px;
 }
 
@@ -43,6 +43,12 @@ main {
 
 .background_color {
   background-color: #d9d9d9;
+}
+
+.message {
+  color: red;
+  align-items: center;
+  
 }
 
 /* || Header */
