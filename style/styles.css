@@ -436,6 +436,10 @@ footer {
     font-size: 14px;
   }
 
+  .carousel-item {
+    padding: 0em 1em 0em 1em;
+  }
+
   .carousel-item img,
   .text_carousel {
     padding: 0;
