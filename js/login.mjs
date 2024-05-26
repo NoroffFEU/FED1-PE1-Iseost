@@ -1,12 +1,5 @@
 
 
-
-
-//Når noen trykker på log in knappen, henter vi ut det brukeren
-//har skrevet inn av mail og passord og sender dette videre til login funsjonen
-//som poste til api - login
-
-//eventlister til login knappen forteller hva den skal gjøre
 document.getElementById('login').addEventListener('click', function () {
     const email = document.getElementById('login_email').value;
     const password = document.getElementById('login_password').value;
@@ -14,7 +7,7 @@ document.getElementById('login').addEventListener('click', function () {
     login(email, password) 
 });
 
-//funksjon for api kall
+
 async function login(email, password) {
     const data = await fetch("https://v2.api.noroff.dev/auth/login", {
         method: 'post',
@@ -28,7 +21,7 @@ async function login(email, password) {
         })
     });
 
-    //Sender over til homepage vis alt stemmer med api
+    
     if(data.status === 200){
         const tech = await data.json();
         const token = tech.data.accessToken;
@@ -42,13 +35,3 @@ async function login(email, password) {
 
 }
 
-// if (response.status === 200) {
-//             alert('Post updated successfully.');
-//             window.location.replace(`/post/index.html?id=${postId}`);
-//         } else {
-//             alert('Failed to update post.');
-//         }
-//     } catch (error) {
-//         console.error('Error updating post:', error);
-//     }
-// }
