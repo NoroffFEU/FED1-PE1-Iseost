@@ -1,7 +1,6 @@
 # FED1 Project Exam 1 --- HotView Labs
 
-![image](![image](https://github.com/NoroffFEU/FED1-PE1-Iseost/assets/94354710/143bb6f7-1f61-4d1c-a4f9-2969646483d4)
-)
+![image](https://github.com/NoroffFEU/FED1-PE1-Iseost/assets/94354710/143bb6f7-1f61-4d1c-a4f9-2969646483d4)
 
 ## Description
 
@@ -29,7 +28,7 @@ I also the design the page, here's a link to my figma fil:
 
 Clone the repo:
 
-git clone
+git clone https://github.com/NoroffFEU/FED1-PE1-Iseost.git
 
 ## Contributing
 
